@@ -1,0 +1,11 @@
+distributionName: python-cdk-demo
+initDeployConfig:
+  template: deployment-plan.yaml
+  stackName: ${environment}-${distributionName}-deployment-plan
+
+package:
+  prePackage:
+    commands:
+      - attini configure set-dist-id --random
+      - cd deployment-plan-app
+      - cdk synth > ../deployment-plan.yaml
