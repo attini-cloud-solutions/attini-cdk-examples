@@ -1,6 +1,6 @@
 # attini-cdk-examples
 Examples of how to build an Attini deployment plan using the AWS CDK. Each example
-contains a CDK app project that can be synthesised in to a deployment plan template.
+contains a CDK app project that can be synthesized into a deployment plan template.
 The project uses the custom [Attini constructs](https://github.com/attini-cloud-solutions/attini-cdk-constructs)
 to create the Attini specific resources.
 
@@ -35,4 +35,4 @@ It can then be deployed by using the "attini deploy run" command. For example:
 attini deploy run ./typescript/attini_dist/typescript-cdk-demo.zip
 ```
 
-The CDK is only required for packaging the distribution, not for deploying it. 
+The CDK is only required for packaging the distribution, not for deploying it.
