@@ -1,17 +1,13 @@
-// const cdk = require('aws-cdk-lib');
-// const { Template } = require('aws-cdk-lib/assertions');
-// const DeploymentPlanApp = require('../lib/deployment-plan-app-stack');
+const cdk = require('aws-cdk-lib');
+const {Template} = require('aws-cdk-lib/assertions');
+const DeploymentPlanApp = require('../lib/deployment-plan-app-stack');
 
-// example test. To run these tests, uncomment this file along with the
-// example resource in lib/deployment-plan-app-stack.js
-test('SQS Queue Created', () => {
-//   const app = new cdk.App();
-//   // WHEN
-//   const stack = new DeploymentPlanApp.DeploymentPlanAppStack(app, 'MyTestStack');
-//   // THEN
-//   const template = Template.fromStack(stack);
+test('Deployment plan created', () => {
+    const app = new cdk.App();
 
-//   template.hasResourceProperties('AWS::SQS::Queue', {
-//     VisibilityTimeout: 300
-//   });
+    const stack = new DeploymentPlanApp.DeploymentPlanAppStack(app, 'MyDeploymentPlanStack');
+
+    const template = Template.fromStack(stack);
+
+    template.hasResourceProperties('Attini::Deploy::DeploymentPlan', {DeploymentPlan: {}});
 });

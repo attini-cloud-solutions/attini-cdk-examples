@@ -1,6 +1,6 @@
 package com.myorg;
 
-import java.util.Arrays;
+import java.util.List;
 
 import attini.cdk.AttiniRunner;
 import attini.cdk.AttiniRunnerJob;
@@ -35,7 +35,7 @@ public class DeploymentPlanAppStack extends DeploymentPlanStack {
                                                             "HelloWorld",
                                                             AttiniRunnerJobProps.builder()
                                                                                 .runner(runner.getRunnerName())
-                                                                                .commands(Arrays.asList(
+                                                                                .commands(List.of(
                                                                                         "echo Hello world!"))
                                                                                 .build());
 
@@ -43,7 +43,7 @@ public class DeploymentPlanAppStack extends DeploymentPlanStack {
                                                               "GoodbyeWorld",
                                                               AttiniRunnerJobProps.builder()
                                                                                   .runner(runner.getRunnerName())
-                                                                                  .commands(Arrays.asList(
+                                                                                  .commands(List.of(
                                                                                           "echo Goodbye world!"))
                                                                                   .build());
 

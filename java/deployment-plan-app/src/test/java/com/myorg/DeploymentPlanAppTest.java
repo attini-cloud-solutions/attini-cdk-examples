@@ -1,26 +1,20 @@
-// package com.myorg;
+ package com.myorg;
 
-// import software.amazon.awscdk.App;
-// import software.amazon.awscdk.assertions.Template;
-// import java.io.IOException;
+ import java.util.Map;
 
-// import java.util.HashMap;
+ import org.junit.jupiter.api.Test;
 
-// import org.junit.jupiter.api.Test;
+ import software.amazon.awscdk.App;
+ import software.amazon.awscdk.assertions.Template;
+ public class DeploymentPlanAppTest {
 
-// example test. To run these tests, uncomment this file, along with the
-// example resource in java/src/main/java/com/myorg/DeploymentPlanAppStack.java
-// public class DeploymentPlanAppTest {
+     @Test
+     public void testStack() {
+         App app = new App();
+         DeploymentPlanAppStack stack = new DeploymentPlanAppStack(app, "test");
 
-//     @Test
-//     public void testStack() throws IOException {
-//         App app = new App();
-//         DeploymentPlanAppStack stack = new DeploymentPlanAppStack(app, "test");
+         Template template = Template.fromStack(stack);
 
-//         Template template = Template.fromStack(stack);
-
-//         template.hasResourceProperties("AWS::SQS::Queue", new HashMap<String, Number>() {{
-//           put("VisibilityTimeout", 300);
-//         }});
-//     }
-// }
+         template.hasResourceProperties("Attini::Deploy::DeploymentPlan", Map.of("DeploymentPlan", Map.of()));
+     }
+ }
