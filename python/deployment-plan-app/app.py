@@ -2,7 +2,7 @@
 
 import aws_cdk as cdk
 
-from python.deployment_plan import PythonStack
+from deploy.deployment_plan import PythonStack
 
 
 app = cdk.App()
