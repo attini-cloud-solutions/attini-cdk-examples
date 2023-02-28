@@ -8,5 +8,5 @@ package:
     commands:
       - attini configure set-dist-id --random
       - cd deployment-plan-app
-      - rm -rf node_modules && npm install
+      - npm install
       - cdk synth > ../deployment-plan.yaml

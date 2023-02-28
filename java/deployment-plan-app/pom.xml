@@ -53,7 +53,7 @@
         <dependency>
             <groupId>io.attini.cdk</groupId>
             <artifactId>attini-cdk-lib</artifactId>
-            <version>0.0.45</version>
+            <version>1.0.0-beta.1</version>
         </dependency>
 
         <dependency>
