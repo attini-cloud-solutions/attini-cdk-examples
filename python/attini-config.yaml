@@ -7,5 +7,6 @@ package:
   prePackage:
     commands:
       - attini configure set-dist-id --random
-      - cd deployment-plan-app
-      - cdk synth > ../deployment-plan.yaml
+
+      - export PYTHONPATH="${PYTHONPATH}:$(pwd)"
+      - cdk synth --app "python3 deployment_plan/deployment_plan.py" > deployment-plan.yaml

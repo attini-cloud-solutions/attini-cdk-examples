@@ -19,7 +19,7 @@ class DeploymentPlanAppStack extends AttiniDeploymentPlanStack {
 
     let attiniRunner = new AttiniRunner(this, 'DemoRunner', {
       runnerConfiguration: {
-        idleTimeToLive: 3600 // container will terminate after being idle for 1 hour
+        idleTimeToLive: 3600 // the container will terminate after being idle for 1 hour
       }
     });
 

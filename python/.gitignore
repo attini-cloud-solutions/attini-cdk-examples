@@ -152,11 +152,4 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-
-# CDK asset staging directory
-.cdk.staging
-cdk.out
-
-
-# Attini distributions
-attini_dist
+cdk.out/
