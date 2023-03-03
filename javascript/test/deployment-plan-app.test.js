@@ -1,6 +1,6 @@
 const cdk = require('aws-cdk-lib');
 const {Template} = require('aws-cdk-lib/assertions');
-const DeploymentPlanApp = require('../lib/deployment-plan-app-stack');
+const DeploymentPlanApp = require('../lib/demo-app-stack');
 
 test('Deployment plan created', () => {
     const app = new cdk.App();

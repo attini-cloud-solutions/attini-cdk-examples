@@ -7,6 +7,5 @@ package:
   prePackage:
     commands:
       - attini configure set-dist-id --random
-      - cd deployment-plan-app
       - npm install
-      - cdk synth > ../deployment-plan.yaml
+      - cdk synth  --app "node deployment-plan/deployment-plan.js" > deployment-plan.yaml

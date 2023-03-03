@@ -8,4 +8,4 @@ package:
     commands:
       - attini configure set-dist-id --random
       - cd deployment-plan-app
-      - cdk synth --output templateDir --path-metadata false
+      - cdk synth --output templateDir --path-metadata false --quiet

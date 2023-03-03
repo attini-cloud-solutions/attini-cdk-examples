@@ -1,15 +1,14 @@
 from constructs import Construct
 # import attini_cdk as attini
 from attini_cdk import (
-  DeploymentPlanStack,
+  AttiniDeploymentPlanStack,
   AttiniRunner,
   AttiniRunnerJob,
-  DeploymentPlan,
   DeploymentPlan,
 )
 
 
-class PythonStack(DeploymentPlanStack):
+class PythonStack(AttiniDeploymentPlanStack):
 
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
