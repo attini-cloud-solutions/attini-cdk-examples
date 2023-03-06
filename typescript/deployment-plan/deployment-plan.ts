@@ -29,7 +29,7 @@ class DeploymentPlanAppStack extends AttiniDeploymentPlanStack {
       runner: attiniRunner.runnerName
     })
 
-    let echoSnsResource = new AttiniRunnerJob(this, 'GoodbyeWorld', {
+    let echoSnsResource = new AttiniRunnerJob(this, 'EchoSNSResource', {
       runner: attiniRunner.runnerName,
       environment: {
         SNS_ARN: deploySnsCdkStack.getOutput(stackId, DemoAppStack.SNS_ARN_OUTPUT_KEY),

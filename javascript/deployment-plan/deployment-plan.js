@@ -23,7 +23,7 @@ class DeploymentPlanAppStack extends AttiniDeploymentPlanStack {
         })
 
 
-        let echoSnsResource = new AttiniRunnerJob(this, 'GoodbyeWorld', {
+        let echoSnsResource = new AttiniRunnerJob(this, 'EchoSNSResource', {
             runner: attiniRunner.runnerName,
             environment: {
                 ENV: AttiniPayload.environment(),

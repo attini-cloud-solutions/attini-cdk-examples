@@ -1,11 +1,10 @@
 distributionName: java-cdk-demo
 initDeployConfig:
-  template: deployment-plan-app/templateDir/DeploymentPlan.template.json
+  template: templateDir/DeploymentPlanStack.template.json
   stackName: ${environment}-${distributionName}-deployment-plan
 
 package:
   prePackage:
     commands:
       - attini configure set-dist-id --random
-      - cd deployment-plan-app
-      - cdk synth --output templateDir --path-metadata false --quiet
+      - cdk synth --output templateDir --path-metadata false --app "mvn -e -q compile -P deployment-plan exec:java"
